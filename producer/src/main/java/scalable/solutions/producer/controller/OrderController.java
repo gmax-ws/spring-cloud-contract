@@ -23,7 +23,7 @@ public class OrderController {
 
     @PostMapping(value = "/order")
     public ResponseEntity<OrderDTO> createOrder(@RequestBody OrderDTO order) {
-        return new ResponseEntity<OrderDTO>(order, HttpStatus.CREATED);
+        return new ResponseEntity<>(order, HttpStatus.CREATED);
     }
 
     @PutMapping(value = "/order")
@@ -37,5 +37,4 @@ public class OrderController {
         OrderDTO order = new OrderDTO(orderId, "order " + orderId);
         return ResponseEntity.ok(order);
     }
-
 }
